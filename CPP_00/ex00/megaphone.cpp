@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 
-std::string to_upper;
-
 int		main(int argc, char **argv)
 {
 	if (argc != 2)
@@ -10,8 +8,8 @@ int		main(int argc, char **argv)
 	else
 	{
 		std::string str = argv[1];
-		
-		std::transform(str.begin(), str.end(), str.begin(),::toupper);
+
+		std::transform(str.begin(), str.end(), str.begin(), ::toupper);
 		std::cout<<str<<std::endl;
 	}
 }
