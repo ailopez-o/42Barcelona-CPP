@@ -4,11 +4,11 @@ SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .
 
-SRCS		= phonebook.cpp
+SRCS		= phonebook.cpp main.cpp contact.cpp
 
 # Compiler options
 CC			= c++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98
+CFLAGS		= -g -Wall -Wextra -Werror -std=c++98
 
 ###################################################
 # The rest is done by the MakeFile automatically, #
