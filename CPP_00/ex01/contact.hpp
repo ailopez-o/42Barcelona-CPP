@@ -12,6 +12,7 @@ class Contact
 		std::string	nickname;
 		std::string	phone_number;
 		std::string	darkest_secret;
+		bool b_available;
 	public:
 		Contact();
 		Contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret);
@@ -20,6 +21,10 @@ class Contact
 		int SetNickName(std::string nickname);
 		int SetPhone(std::string phone_number);
 		int SetSecret(std::string darkest_secret);
+		int SetAvailable(bool value);
+		std::string GetFirstName();
+		bool GetAvailable();
+		int PrintView();
 
 };
 
