@@ -18,27 +18,30 @@ Phonebook::Phonebook(const std::string name)
 	this->book_name = name;
 }
 
-int Phonebook::AddContact()
+std::string get_input(std::string label)
 {
 	std::string input;
+	
+	while (input.length() == 0)
+	{
+		std::cout<<label;
+		std::getline(std::cin, input);
+	}
+	return input;
+}
+
+
+int Phonebook::AddContact()
+{
 	Contact &new_contact = SearchFreeContact();
 	std::cout<<std::endl;
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	std::cout<<" > First Name: ";
-	std::getline(std::cin, input);
-	new_contact.SetFirstName(input);
-	std::cout<<" > Last Name: ";
-	std::getline(std::cin, input);
-	new_contact.SetLastName(input);
-	std::cout<<" > Nick Name: ";
-	std::getline(std::cin, input);
-	new_contact.SetNickName(input);
-	std::cout<<" > Phone: ";
-	std::getline(std::cin, input);
-	new_contact.SetPhone(input);
-	std::cout<<" > Darkest Secret: ";
-	std::getline(std::cin, input);
-	new_contact.SetSecret(input);
+
+	new_contact.SetFirstName(get_input(" > First Name: "));
+	new_contact.SetLastName(get_input(" > Last Name: "));
+	new_contact.SetNickName(get_input(" > Nick Name: "));
+	new_contact.SetPhone(get_input(" > Phone: "));
+	new_contact.SetSecret(get_input(" > Darkest Secret: "));
 	std::cout<<"\n User ["<< new_contact.GetFirstName() <<"] added success" << std::endl;
 	this->last_index = GetNextIndex();
 	num_comntacts++;
