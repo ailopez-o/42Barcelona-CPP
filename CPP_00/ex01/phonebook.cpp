@@ -40,6 +40,7 @@ int Phonebook::AddContact()
 	Contact &new_contact = SearchFreeContact();
 	std::cout<<std::endl;
 
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	new_contact.SetFirstName(get_input(" > First Name: "));
 	new_contact.SetLastName(get_input(" > Last Name: "));
 	new_contact.SetNickName(get_input(" > Nick Name: "));

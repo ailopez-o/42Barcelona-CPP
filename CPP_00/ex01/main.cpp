@@ -21,7 +21,8 @@ while (true)
 	while (input.empty())
 	{
 		std::cout<<std::endl<<"Your selection: ";
-		getline(std::cin, input);
+		std::cin >> input;
+		//getline(std::cin, input);
 	}
 	if (!input.compare("EXIT"))
 		break;
@@ -35,14 +36,16 @@ while (true)
 		if (my_phonebook->PrintContacts() != EXIT_FAILURE)
 		{
 			std::cout<<"Your choice: ";
-			std::cin >> num_select;
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			if (num_select <= my_phonebook->GetNumContacts() && num_select > 0)
-			{
+    		std::cin >> num_select;
+			std::cout<<std::endl;
+        	if (std::cin.good() && (num_select <= my_phonebook->GetNumContacts())) 
 				my_phonebook->PrintContact(num_select - 1);
-			}
 			else
-				std::cout<<"WARNING: Out of range ";
+			{
+				std::cout<<"WARNING: Out of range " << std::endl;
+				std::cin.clear();
+            	std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+			}
 		}
 		input.erase();
 	}
