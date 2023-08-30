@@ -12,7 +12,7 @@ class Phonebook
 	private:
 		std::string	book_name;
 		int	last_index;
-		int	num_comntacts;
+		int	num_contacts;
 		Contact	contacts[MAX_CONTACTS];
 		Contact& SearchFreeContact();
 		int GetNextIndex();
@@ -21,7 +21,9 @@ class Phonebook
 		Phonebook();
 		Phonebook(std::string name);
 		int PrintContacts();
+		int PrintContact(int index);
 		int AddContact();
+		int GetNumContacts();
 		Contact& SearchContact(int index);
 };
 

@@ -25,6 +25,7 @@ class Contact
 		std::string GetFirstName();
 		bool GetAvailable();
 		int PrintView();
+		int PrintContact();
 
 };
 

@@ -26,7 +26,6 @@ bool Contact::GetAvailable()
 	return(this->b_available);
 }
 
-
 int Contact::SetAvailable(bool value)
 {	
 	this->b_available = value;
@@ -72,12 +71,24 @@ std::string str_truncate(std::string str, unsigned int len)
 		return(str);
 }
 
+int Contact::PrintContact()
+{
+	std::cout<<"********************************************************" << std::endl;
+	std::cout<<" > First Name      : " << this->first_name << std::endl;
+	std::cout<<" > Last Name       : " << this->last_name << std::endl;
+	std::cout<<" > Nickname        : " << this->nickname << std::endl;
+	std::cout<<" > Phone           : " << this->phone_number << std::endl;
+	std::cout<<" > Darkest Secret  : " << this->darkest_secret << std::endl;
+	std::cout<<"********************************************************" << std::endl;
+	return(EXIT_SUCCESS);
+}
+
+
 int Contact::PrintView()
 {
     std::cout << " | " << std::setw(10) << str_truncate(this->first_name, 10);
     std::cout << " | " << std::setw(10) << str_truncate(this->last_name, 10);
     std::cout << " | " << std::setw(10) << str_truncate(this->nickname, 10);
-	std::cout << " | ";
-	std::cout<<std::endl;
+	std::cout << " | "<<std::endl;
 	return (EXIT_SUCCESS);
 }
