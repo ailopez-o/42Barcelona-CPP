@@ -4,18 +4,12 @@
 
 // ------// Class Phonebook
 
-Phonebook::Phonebook()
+int Phonebook::phonebook()
 {
 	this->last_index = -1;
 	this->num_contacts = 0;
 	this->book_name = "phonebook";
-}
-
-Phonebook::Phonebook(const std::string name)
-{
-	this->last_index = -1;
-	this->num_contacts = 0;
-	this->book_name = name;
+	return (EXIT_SUCCESS);
 }
 
 static std::string get_input(std::string label)
@@ -30,29 +24,29 @@ static std::string get_input(std::string label)
 	return input;
 }
 
-int Phonebook::GetNumContacts()
+int Phonebook::getNumContacts()
 {
 	return this->num_contacts;
 }
 
-int Phonebook::AddContact()
+int Phonebook::addContact()
 {
-	Contact &new_contact = SearchFreeContact();
+	Contact &new_contact = searchFreeContact();
 	std::cout<<std::endl;
 
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	new_contact.SetFirstName(get_input(" > First Name: "));
-	new_contact.SetLastName(get_input(" > Last Name: "));
-	new_contact.SetNickName(get_input(" > Nick Name: "));
-	new_contact.SetPhone(get_input(" > Phone: "));
-	new_contact.SetSecret(get_input(" > Darkest Secret: "));
-	std::cout<<"\n User ["<< new_contact.GetFirstName() <<"] added success" << std::endl;
-	this->last_index = GetNextIndex();
+	new_contact.setFirstName(get_input(" > First Name: "));
+	new_contact.setLastName(get_input(" > Last Name: "));
+	new_contact.setNickName(get_input(" > Nick Name: "));
+	new_contact.setPhone(get_input(" > Phone: "));
+	new_contact.setSecret(get_input(" > Darkest Secret: "));
+	std::cout<<"\n User ["<< new_contact.getFirstName() <<"] added success" << std::endl;
+	this->last_index = getNextIndex();
 	num_contacts++;
 	return(EXIT_SUCCESS);
 }
 
-int Phonebook::PrintContacts()
+int Phonebook::printContacts()
 {
 	int num_print;
 
@@ -69,31 +63,31 @@ int Phonebook::PrintContacts()
 	for(int i = 0; i < num_print; i++)
 	{	
 		std::cout<<" "<< i + 1 << " ";
-		contacts[i].PrintView();
+		contacts[i].printView();
 	}
 	std::cout<<std::endl;
 	return (EXIT_SUCCESS);
 }
 
-int Phonebook::PrintContact(int index)
+int Phonebook::printContact(int index)
 {
-	this->contacts[index].PrintContact();
+	this->contacts[index].printContact();
 	return (EXIT_SUCCESS);
 }
 
-Contact& Phonebook::SearchContact(int index)
+Contact& Phonebook::searchContact(int index)
 {	
 	return (this->contacts[index]);
 }
 
-int Phonebook::GetNextIndex()
+int Phonebook::getNextIndex()
 {
 	if (this->last_index == (MAX_CONTACTS - 1))
 		return 0;
 	return (this->last_index + 1);
 }
 
-Contact& Phonebook::SearchFreeContact()
+Contact& Phonebook::searchFreeContact()
 {
-	return this->contacts[GetNextIndex()];
+	return this->contacts[getNextIndex()];
 }

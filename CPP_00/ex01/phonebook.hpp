@@ -14,17 +14,16 @@ class Phonebook
 		int	last_index;
 		int	num_contacts;
 		Contact	contacts[MAX_CONTACTS];
-		Contact& SearchFreeContact();
-		int GetNextIndex();
+		Contact& searchFreeContact();
+		int getNextIndex();
 
 	public:
-		Phonebook();
-		Phonebook(std::string name);
-		int PrintContacts();
-		int PrintContact(int index);
-		int AddContact();
-		int GetNumContacts();
-		Contact& SearchContact(int index);
+		int phonebook();
+		int printContacts();
+		int printContact(int index);
+		int addContact();
+		int getNumContacts();
+		Contact& searchContact(int index);
 };
 
 #endif // PHONEBOOK_HPP

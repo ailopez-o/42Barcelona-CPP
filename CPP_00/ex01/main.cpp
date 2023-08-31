@@ -8,7 +8,7 @@ int		main(void)
 	std::string input;
 	int num_select;
 	Phonebook* my_phonebook;
-	my_phonebook = new Phonebook("CPP00");
+	my_phonebook = new Phonebook();
 
 
 while (true)
@@ -28,18 +28,18 @@ while (true)
 		break;
 	else if (!input.compare("ADD"))
 	{
-		my_phonebook->AddContact();
+		my_phonebook->addContact();
 		input.erase();
 	}
 	else if (!input.compare("SEARCH"))
 	{
-		if (my_phonebook->PrintContacts() != EXIT_FAILURE)
+		if (my_phonebook->printContacts() != EXIT_FAILURE)
 		{
 			std::cout<<"Your choice: ";
     		std::cin >> num_select;
 			std::cout<<std::endl;
-        	if (std::cin.good() && (num_select <= my_phonebook->GetNumContacts())) 
-				my_phonebook->PrintContact(num_select - 1);
+        	if (std::cin.good() && (num_select <= my_phonebook->getNumContacts())) 
+				my_phonebook->printContact(num_select - 1);
 			else
 			{
 				std::cout<<"WARNING: Out of range " << std::endl;

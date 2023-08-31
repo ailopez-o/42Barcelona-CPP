@@ -3,61 +3,63 @@
 
 // ------// Class Contact
 
-Contact::Contact()
+int Contact::contact()
 {
 	this->first_name = "";
 	this->last_name = "";
 	this->nickname = "";
 	this->phone_number = "";
 	this->darkest_secret = "";
+	return (EXIT_SUCCESS);
 }
 
-Contact::Contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret)
+int Contact::contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret)
 {
 	this->first_name = first_name;
 	this->last_name = last_name;
 	this->nickname = nickname;
 	this->phone_number = phone_number;
 	this->darkest_secret = darkest_secret;
+	return (EXIT_SUCCESS);
 }
 
-bool Contact::GetAvailable()
+bool Contact::getAvailable()
 {
 	return(this->b_available);
 }
 
-int Contact::SetAvailable(bool value)
+int Contact::setAvailable(bool value)
 {	
 	this->b_available = value;
 	return(EXIT_SUCCESS);
 }
 
-std::string Contact::GetFirstName()
+std::string Contact::getFirstName()
 {
 	return(this->first_name);
 }
 
-int Contact::SetFirstName(std::string first_name)
+int Contact::setFirstName(std::string first_name)
 {
 	this->first_name = first_name;
 	return(EXIT_SUCCESS);
 }
-int Contact::SetLastName(std::string last_name)
+int Contact::setLastName(std::string last_name)
 {
 	this->last_name = last_name;
 	return(EXIT_SUCCESS);
 }
-int Contact::SetNickName(std::string nickname)
+int Contact::setNickName(std::string nickname)
 {
 	this->nickname = nickname;
 	return(EXIT_SUCCESS);
 }
-int Contact::SetPhone(std::string phone_number)
+int Contact::setPhone(std::string phone_number)
 {
 	this->phone_number = phone_number;
 	return(EXIT_SUCCESS);
 }
-int Contact::SetSecret(std::string darkest_secret)
+int Contact::setSecret(std::string darkest_secret)
 {
 	this->darkest_secret = darkest_secret;
 	return(EXIT_SUCCESS);
@@ -71,7 +73,7 @@ std::string str_truncate(std::string str, unsigned int len)
 		return(str);
 }
 
-int Contact::PrintContact()
+int Contact::printContact()
 {
 	std::cout<<"********************************************************" << std::endl;
 	std::cout<<" > First Name      : " << this->first_name << std::endl;
@@ -84,7 +86,7 @@ int Contact::PrintContact()
 }
 
 
-int Contact::PrintView()
+int Contact::printView()
 {
     std::cout << " | " << std::setw(10) << str_truncate(this->first_name, 10);
     std::cout << " | " << std::setw(10) << str_truncate(this->last_name, 10);
