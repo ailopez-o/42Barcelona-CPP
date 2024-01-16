@@ -3,17 +3,16 @@
 
 int		main(int argc, char **argv)
 {
-	if (argc < 2)
-		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *"<<std::endl;
-	else
-	{	int i;
-		i = 0;
-		while (argv[++i])
-		{
-			std::string str = argv[i];
-			std::transform(str.begin(), str.end(), str.begin(), ::toupper);
-			std::cout<<str;
+	if (argc == 1)
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	else {
+		for (int i = 1; argv[i]; i++) {
+			for (int j = 0; argv[i][j]; j++)
+				std::cout << (char) toupper(argv[i][j]);
+			if (i < argc - 1)
+				std::cout << ' ';
 		}
-		std::cout<<std::endl;
 	}
+	std::cout << std::endl;
+	return (EXIT_SUCCESS);
 }
