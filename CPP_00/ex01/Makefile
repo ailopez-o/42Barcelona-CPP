@@ -4,7 +4,7 @@ SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .
 
-SRCS		= phonebook.cpp main.cpp contact.cpp
+SRCS		= Phonebook.cpp main.cpp Contact.cpp
 
 # Compiler options
 CC			= c++

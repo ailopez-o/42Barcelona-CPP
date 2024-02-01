@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 #define	MAX_CONTACTS 8
 

@@ -1,10 +1,10 @@
 # Folders and Names
-NAME		= megaphone
+NAME		= harl
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .
 
-SRCS		= Megaphone.cpp
+SRCS		= main.cpp Harl.cpp
 
 # Compiler options
 CC			= c++
@@ -19,7 +19,7 @@ all: $(NAME)
 
 $(NAME): $(SRCSDIR)/$(SRCS)
 	@echo "Assembling $@"
-	$(CC) $(CFLAGS) -o $@ $^
+	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
 

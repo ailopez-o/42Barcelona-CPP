@@ -1,5 +1,5 @@
 #include <iomanip>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 // ------// Class Contact
 
