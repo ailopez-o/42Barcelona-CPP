@@ -7,8 +7,8 @@ INCLUDES	= .
 SRCS		= Megaphone.cpp
 
 # Compiler options
-CC			= c++
-CFLAGS		= -g -Wall -Wextra -Werror -std=c++98
+CC			= g++
+CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 ###################################################
 # The rest is done by the MakeFile automatically, #

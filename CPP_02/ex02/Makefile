@@ -1,10 +1,10 @@
 # Folders and Names
-NAME		= phonebook
+NAME		= fixed
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .
 
-SRCS		= Phonebook.cpp main.cpp Contact.cpp
+SRCS		= main.cpp FixedPointNumber.cpp
 
 # Compiler options
 CC			= g++
