@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
     std::string line;
 
     // Abrir el archivo original
-    std::ifstream inputFile(filename);
+    std::ifstream inputFile(filename.c_str());
     if (!inputFile.is_open()) {
         std::cerr << "Could not open file: " << filename << std::endl;
         return 1;
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
     std::string newFilename = filename + ".replace";
 
     // Abrir el nuevo archivo para escribir el contenido modificado
-    std::ofstream outputFile(newFilename);
+    std::ofstream outputFile(newFilename.c_str());
     if (!outputFile.is_open()) {
         std::cerr << "Could not create file: " << newFilename << std::endl;
         return 1;
