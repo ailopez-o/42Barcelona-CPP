@@ -11,7 +11,7 @@ int		main(void)
 	my_phonebook = new Phonebook();
 
 
-while (true)
+while (std::cin)
 {
 	input.erase();
 	std::cout<<"\n########   Select an option ############\n"<<std::endl;
@@ -22,7 +22,8 @@ while (true)
 	{
 		std::cout<<std::endl<<"Your selection: ";
 		std::cin >> input;
-		//getline(std::cin, input);
+		if (!std::cin)
+			break;
 	}
 	if (!input.compare("EXIT"))
 		break;

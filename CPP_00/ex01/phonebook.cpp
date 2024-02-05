@@ -4,12 +4,11 @@
 
 // ------// Class Phonebook
 
-int Phonebook::phonebook()
+Phonebook::Phonebook()
 {
 	this->last_index = -1;
 	this->num_contacts = 0;
 	this->book_name = "phonebook";
-	return (EXIT_SUCCESS);
 }
 
 static std::string get_input(std::string label)
@@ -20,6 +19,8 @@ static std::string get_input(std::string label)
 	{
 		std::cout<<label;
 		std::getline(std::cin, input);
+		if (!std::cin)
+			break;
 	}
 	return input;
 }
@@ -40,6 +41,8 @@ int Phonebook::addContact()
 	new_contact.setNickName(get_input(" > Nick Name: "));
 	new_contact.setPhone(get_input(" > Phone: "));
 	new_contact.setSecret(get_input(" > Darkest Secret: "));
+	if (!std::cin)
+		return (EXIT_SUCCESS);
 	std::cout<<"\n User ["<< new_contact.getFirstName() <<"] added success" << std::endl;
 	this->last_index = getNextIndex();
 	num_contacts++;

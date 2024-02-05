@@ -18,7 +18,7 @@ class Phonebook
 		int getNextIndex();
 
 	public:
-		int phonebook();
+		Phonebook();
 		int printContacts();
 		int printContact(int index);
 		int addContact();
