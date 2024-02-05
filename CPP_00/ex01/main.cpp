@@ -45,7 +45,7 @@ while (std::cin)
 			{
 				std::cout<<"WARNING: Out of range " << std::endl;
 				std::cin.clear();
-            	std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            	std::cin.ignore(1000,'\n');
 			}
 		}
 		input.erase();
