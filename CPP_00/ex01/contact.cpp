@@ -10,7 +10,7 @@ int Contact::contact()
 	this->nickname = "";
 	this->phone_number = "";
 	this->darkest_secret = "";
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 int Contact::contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret)
@@ -20,7 +20,7 @@ int Contact::contact(std::string first_name, std::string last_name, std::string 
 	this->nickname = nickname;
 	this->phone_number = phone_number;
 	this->darkest_secret = darkest_secret;
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 bool Contact::getAvailable()
@@ -31,7 +31,7 @@ bool Contact::getAvailable()
 int Contact::setAvailable(bool value)
 {	
 	this->b_available = value;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 
 std::string Contact::getFirstName()
@@ -42,17 +42,17 @@ std::string Contact::getFirstName()
 int Contact::setFirstName(std::string first_name)
 {
 	this->first_name = first_name;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 int Contact::setLastName(std::string last_name)
 {
 	this->last_name = last_name;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 int Contact::setNickName(std::string nickname)
 {
 	this->nickname = nickname;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 int Contact::setPhone(std::string phone_number)
 {
@@ -62,7 +62,7 @@ int Contact::setPhone(std::string phone_number)
 int Contact::setSecret(std::string darkest_secret)
 {
 	this->darkest_secret = darkest_secret;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 
 std::string str_truncate(std::string str, unsigned int len)
@@ -82,7 +82,7 @@ int Contact::printContact()
 	std::cout<<" > Phone           : " << this->phone_number << std::endl;
 	std::cout<<" > Darkest Secret  : " << this->darkest_secret << std::endl;
 	std::cout<<"********************************************************" << std::endl;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 
 
@@ -92,5 +92,5 @@ int Contact::printView()
     std::cout << " | " << std::setw(10) << str_truncate(this->last_name, 10);
     std::cout << " | " << std::setw(10) << str_truncate(this->nickname, 10);
 	std::cout << " | "<<std::endl;
-	return (EXIT_SUCCESS);
+	return (0);
 }

@@ -42,11 +42,11 @@ int Phonebook::addContact()
 	new_contact.setPhone(get_input(" > Phone: "));
 	new_contact.setSecret(get_input(" > Darkest Secret: "));
 	if (!std::cin)
-		return (EXIT_SUCCESS);
+		return (0);
 	std::cout<<"\n User ["<< new_contact.getFirstName() <<"] added success" << std::endl;
 	this->last_index = getNextIndex();
 	num_contacts++;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 
 int Phonebook::printContacts()
@@ -69,13 +69,13 @@ int Phonebook::printContacts()
 		contacts[i].printView();
 	}
 	std::cout<<std::endl;
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 int Phonebook::printContact(int index)
 {
 	this->contacts[index].printContact();
-	return (EXIT_SUCCESS);
+	return (0);
 }
 
 Contact& Phonebook::searchContact(int index)
