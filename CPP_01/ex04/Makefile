@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= sed
+NAME		= sed.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

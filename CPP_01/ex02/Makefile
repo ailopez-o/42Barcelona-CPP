@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= brain
+NAME		= brain.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

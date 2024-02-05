@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= weapon
+NAME		= weapon.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= zombie
+NAME		= zombie.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= phonebook
+NAME		= phonebook.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

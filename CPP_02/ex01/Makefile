@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= fixed
+NAME		= fixed.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

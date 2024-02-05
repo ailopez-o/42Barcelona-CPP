@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= megaphone
+NAME		= megaphone.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

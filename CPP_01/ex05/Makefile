@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= harl
+NAME		= harl.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .

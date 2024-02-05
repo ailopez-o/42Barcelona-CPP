@@ -1,5 +1,5 @@
 # Folders and Names
-NAME		= claptrap
+NAME		= claptrap.out
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .
