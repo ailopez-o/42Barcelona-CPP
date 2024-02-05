@@ -35,7 +35,7 @@ int Phonebook::addContact()
 	Contact &new_contact = searchFreeContact();
 	std::cout<<std::endl;
 
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	new_contact.setFirstName(get_input(" > First Name: "));
 	new_contact.setLastName(get_input(" > Last Name: "));
 	new_contact.setNickName(get_input(" > Nick Name: "));
@@ -56,7 +56,7 @@ int Phonebook::printContacts()
 	if (this->num_contacts == 0)
 	{
 		std::cout << std::endl << "WARNING: There is no contacts" << std::endl;
-		return (EXIT_FAILURE);
+		return (1);
 	}
 	if (this->num_contacts >= MAX_CONTACTS)
 		num_print = MAX_CONTACTS;
