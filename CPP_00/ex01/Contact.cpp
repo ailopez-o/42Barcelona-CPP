@@ -57,7 +57,7 @@ int Contact::setNickName(std::string nickname)
 int Contact::setPhone(std::string phone_number)
 {
 	this->phone_number = phone_number;
-	return(EXIT_SUCCESS);
+	return(0);
 }
 int Contact::setSecret(std::string darkest_secret)
 {

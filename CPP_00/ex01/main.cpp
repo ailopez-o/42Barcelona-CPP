@@ -34,7 +34,7 @@ while (std::cin)
 	}
 	else if (!input.compare("SEARCH"))
 	{
-		if (my_phonebook->printContacts() != EXIT_FAILURE)
+		if (my_phonebook->printContacts() != 1)
 		{
 			std::cout<<"Your choice: ";
     		std::cin >> num_select;
@@ -57,5 +57,5 @@ while (std::cin)
 	}
 }
 	delete (my_phonebook);
-	return (0)
+	return (0);
 }
