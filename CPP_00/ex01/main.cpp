@@ -57,4 +57,5 @@ while (std::cin)
 	}
 }
 	delete (my_phonebook);
+	return (0)
 }
