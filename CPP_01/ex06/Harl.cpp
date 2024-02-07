@@ -27,15 +27,15 @@ void Harl::complain(LogLevel level) {
         case DEBUG:
             std::cout << "[ DEBUG ]\n";
 			debug();
-            // No hay break aquí para permitir que la ejecución continúe a los siguientes niveles
+	// falls through
         case INFO:
             std::cout << "[ INFO ]\n";
 			info();
-            // No hay break aquí para permitir que la ejecución continúe a los siguientes niveles
+   	// falls through
         case WARNING:
             std::cout << "[ WARNING ]\n";
 			warning();
-            // No hay break aquí para permitir que la ejecución continúe al siguiente nivel
+	 // falls through
         case ERROR:
             std::cout << "[ ERROR ]\n";
 			error();

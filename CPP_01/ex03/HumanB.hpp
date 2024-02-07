@@ -11,7 +11,7 @@ private:
     Weapon* weapon;  // Puntero a Weapon, permite que HumanB no tenga arma inicialmente
 
 public:
-    HumanB(std::string name) : name(name), weapon(nullptr) {}
+    HumanB(std::string name) : name(name), weapon(NULL) {}
     void setWeapon(Weapon& newWeapon);
     void attack() const;
 };

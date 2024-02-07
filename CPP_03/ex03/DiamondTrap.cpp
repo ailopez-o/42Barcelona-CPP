@@ -13,7 +13,7 @@ DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"
     std::cout << "DiamondTrap " << this->name << " constructed." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& other) : FragTrap(other), ScavTrap(other) {
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other.ClapTrap::name) FragTrap(other), ScavTrap(other) {
     this->name = other.name;
     std::cout << "DiamondTrap " << this->name << " copy constructed." << std::endl;
 }
